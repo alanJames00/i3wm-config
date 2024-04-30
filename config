@@ -610,6 +610,6 @@ bindsym $mod+Ctrl+Shift+Up resize grow height 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+Down resize shrink height 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+Left resize grow width 10 px or 10 ppt
 
-exec redshift
+exec redshift -O 4000 
 exec i3-msg split v
 
