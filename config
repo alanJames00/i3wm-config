@@ -67,7 +67,7 @@ gaps outer 3
 floating_modifier $mod
 
 # switch/iterate between workspaces
-bindsym $mod+Tab workspace next
+# bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # switch to workspace
@@ -176,6 +176,8 @@ bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+q kill
+
+# jome emoji picker
 
 # exit-menu
 bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
@@ -299,7 +301,8 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 bindsym $mod+n exec --no-startup-id /usr/bin/thunar
-bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+# bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym Print exec --no-startup-id flameshot gui
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
@@ -408,6 +411,8 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # exec --no-startup-id sleep 2 && nitrogen --restore
 exec --no-startup-id nitrogen --restore
 
+# flameshot startup
+exec --no-startup-id flameshot
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
 
@@ -524,7 +529,7 @@ bar {
 #	    	i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
-		    #tray_output primary
+		    tray_output primary
 		    tray_padding 0
 
 # When strip_workspace_numbers is set to yes,

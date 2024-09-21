@@ -9,7 +9,7 @@ function get_brightness {
     # min = 0
 
     # calculate the percentage out of 255
-    brightness_per=$(($brightness * 100 /255))
+    brightness_per=$(($brightness * 100 /120000))
     echo $brightness_per
 }
 
